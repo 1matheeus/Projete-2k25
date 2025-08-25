@@ -38,58 +38,13 @@ const Header = () => {
     <div className="header">
       <div className="logo">
         <div className="logo-icon">
-          <svg width="45" height="27" viewBox="0 0 160 96" fill="none">
-            {/* Logo AERIS - Exatamente como a imagem enviada */}
-            <defs>
-              <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FF9500" />
-                <stop offset="40%" stopColor="#FF8C00" />
-                <stop offset="70%" stopColor="#FF7700" />
-                <stop offset="100%" stopColor="#FF6600" />
-              </linearGradient>
-            </defs>
-            
-            {/* Forma da nuvem principal - baseada na imagem exata */}
-            <path d="M30 60 
-                     C18 60, 8 50, 8 38 
-                     C8 26, 18 16, 30 16
-                     C36 8, 48 4, 62 8
-                     C70 4, 82 4, 90 8
-                     C98 4, 110 8, 118 16
-                     C130 16, 140 26, 140 38
-                     C140 50, 130 60, 118 60
-                     C110 68, 98 72, 86 68
-                     C82 72, 70 72, 62 68
-                     C48 72, 36 68, 30 60 Z" 
-                  fill="url(#cloudGradient)" />
-            
-            {/* Partes adicionais da nuvem para volume */}
-            <ellipse cx="45" cy="65" rx="18" ry="8" fill="url(#cloudGradient)" />
-            <ellipse cx="74" cy="68" rx="22" ry="10" fill="url(#cloudGradient)" />
-            <ellipse cx="105" cy="65" rx="18" ry="8" fill="url(#cloudGradient)" />
-            
-            {/* Escudo preto central - exatamente como na imagem */}
-            <path d="M74 22 
-                     L65 25 
-                     L65 45 
-                     C65 52, 68 56, 74 60 
-                     C80 56, 83 52, 83 45 
-                     L83 25 
-                     L74 22 Z" 
-                  fill="#1a1a1a" 
-                  stroke="#1a1a1a" 
-                  strokeWidth="1"/>
-            
-            {/* Parte interna do escudo */}
-            <path d="M74 26 
-                     L67 28 
-                     L67 44 
-                     C67 49, 69 52, 74 55 
-                     C79 52, 81 49, 81 44 
-                     L81 28 
-                     L74 26 Z" 
-                  fill="#FF8C00" />
-          </svg>
+          <img 
+            src={require('./Logo-removebg-preview.png')} 
+            alt="Logo" 
+            width="70" 
+            height="90" 
+            style={{ objectFit: 'contain' }}
+          />
         </div>
         <span className="logo-text">AERIS</span>
       </div>

@@ -216,15 +216,24 @@
 
 .highlight.red {
   color: #f44336;
+    background-color: #ffccc7;
+  padding: 0px 3px;
+  border-radius: 4px;
 }
 
 .highlight.green {
-  color: #4CAF50;
+  color: #2e7d32;
+  background-color: #c2fcc2;
+  padding: 0px 3px;
+  border-radius: 5px;
 }
 
 .highlight.orange,
 .highlight.blue {
   color: #2196F3;
+  background-color: #bfdef8;
+  padding: 0px 3px;
+  border-radius: 5px;
 }
 
 /* Footer */
