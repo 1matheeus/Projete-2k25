@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect } from 'react'
 
 function App() {
-  // Função para navegação suave personalizada
+  // Smooth scrolling navigation function
   const smoothScrollTo = (targetId) => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -16,7 +16,7 @@ function App() {
     }
   };
 
-  // Animações de entrada quando as seções aparecem na tela
+  // Setup scroll animations for sections
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -32,7 +32,7 @@ function App() {
       });
     }, observerOptions);
 
-    // Observar todas as seções
+    // Observe all sections for animation
     const sections = document.querySelectorAll('section, header');
     sections.forEach(section => {
       section.style.opacity = '0';
@@ -44,10 +44,9 @@ function App() {
   }, []);
 
   return (
-    // Container principal da aplicação - define layout geral da página
     <div className="blank-page">
       
-      {/* Menu de navegação fixo */}
+      {/* Fixed Navigation Bar */}
       <nav className="navbar-fixed">
         <div className="navbar-content">
           <div className="navbar-logo">
@@ -64,25 +63,20 @@ function App() {
         </div>
       </nav>
       
-      {/* Cabeçalho da página - contém título, subtítulo e logo em duas colunas */}
+      {/* Header Section */}
       <header>
-        {/* Coluna esquerda - informações textuais sobre o projeto */}
         <div className="header-text">
           <h1><b>Alerta de Emissões e Riscos Industriais de Substâncias.</b></h1>
           <h2><b>Tecnologia que protege vidas e o planeta.</b></h2>
           <p><b>O AERIS foi desenvolvido por quatro estudantes da ETE "FMC", inspirado no conceito de ecologia integral proposto na Campanha da Fraternidade 2025.</b></p>
           <p><b>O projeto tem como foco a detecção de vazamentos de gases em indústrias, promovendo segurança e sustentabilidade por meio da tecnologia.</b></p>
-          
-          {/* Conteúdo adicional aqui - adicione o que você quiser abaixo */}
-          
         </div>
-        {/* Coluna direita - exibe logo/imagem do projeto */}
         <div className="header-image">
           <img src="/aerisnoBG.png" alt="Logo AERIS" />
         </div>
       </header>
 
-      {/* Seção "O que é o AERIS?" - centralizada na página */}
+      {/* About AERIS Section */}
       <section id="projeto" className="oque-e-aeris">
         <h2>O que é o AERIS?</h2>
         <div className="aeris-descricao">
@@ -109,7 +103,7 @@ function App() {
         </div>
       </section>
 
-      {/* Seção "Produto" - informações técnicas detalhadas sobre o sistema */}
+      {/* Product Section */}
       <section id="produto" className="produto-section">
         <h2>Produto:</h2>
         <div className="produto-content">
@@ -135,64 +129,36 @@ function App() {
         </div>
       </section>
 
-      {/* Seção "Por que utilizar o AERIS?" - benefícios e vantagens */}
+      {/* Benefits Section */}
       <section id="validacao" className="por-que-aeris">
         <h2>Por que utilizar o AERIS?</h2>
         <div className="beneficios-content">
           <div className="beneficios-coluna-esquerda">
             <ul className="beneficios-lista">
-              <li>
-                Monitoramento em <span className="destaque">tempo real</span>;
-              </li>
-              <li>
-                Alertas automáticos;
-              </li>
-              <li>
-                Relatórios inteligentes;
-              </li>
-              <li>
-                Visualização por <span className="destaque">gráficos interativos</span>;
-              </li>
-              <li>
-                Registro histórico de dados;
-              </li>
-              <li>
-                Instalação <span className="destaque">simples</span> e <span className="destaque">modular</span>;
-              </li>
-              <li>
-                Acesso remoto via plataforma web;
-              </li>
-              <li>
-                Suporte à conformidade ambiental;
-              </li>
+              <li>Monitoramento em <span className="destaque">tempo real</span>;</li>
+              <li>Alertas automáticos;</li>
+              <li>Relatórios inteligentes;</li>
+              <li>Visualização por <span className="destaque">gráficos interativos</span>;</li>
+              <li>Registro histórico de dados;</li>
+              <li>Instalação <span className="destaque">simples</span> e <span className="destaque">modular</span>;</li>
+              <li>Acesso remoto via plataforma web;</li>
+              <li>Suporte à conformidade ambiental;</li>
             </ul>
           </div>
           <div className="divisor-vertical"></div>
           <div className="beneficios-coluna-direita">
             <ul className="beneficios-lista">
-              <li>
-                Mais segurança para os colaboradores;
-              </li>
-              <li>
-                Conformidade com normas ambientais e de segurança;
-              </li>
-              <li>
-                Prevenção de acidentes e paradas não planejadas;
-              </li>
-              <li>
-                <span className="destaque">Decisões mais rápidas</span> e baseadas em dados;
-              </li>
-              <li>
-                <span className="destaque">Redução de desperdícios e perdas</span> de insumos;
-              </li>
+              <li>Mais segurança para os colaboradores;</li>
+              <li>Conformidade com normas ambientais e de segurança;</li>
+              <li>Prevenção de acidentes e paradas não planejadas;</li>
+              <li><span className="destaque">Decisões mais rápidas</span> e baseadas em dados;</li>
+              <li><span className="destaque">Redução de desperdícios e perdas</span> de insumos;</li>
             </ul>
           </div>
         </div>
       </section>
 
-
-
-      {/* Seção "Quem somos?" - informações sobre a equipe e o projeto */}
+      {/* About Us Section */}
       <section id="sobre-nos" className="quem-somos">
         <h2>Quem somos?</h2>
         <div className="quem-somos-content">
@@ -229,7 +195,7 @@ function App() {
         </div>
       </section>
 
-      {/* Botão fixo para voltar ao topo */}
+      {/* Back to Top Button */}
       <button 
         className="back-to-top"
         onClick={() => {
